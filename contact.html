@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Kwiki Education Services — reach out to donate, volunteer, partner, or learn more about our programs in Uganda." />
+  <title>Contact Us | Kwiki Education Services</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <span class="org-name">Kwiki Education Services</span>
+        <span class="org-slogan">Be Hope for Someone's Tomorrow</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="kampala.html">Kampala Project</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="donations.html" class="btn-donate">Donate Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label" style="color: rgba(255,255,255,0.65);">Get in Touch</p>
+      <h1>Contact Us</h1>
+      <p>Whether you want to donate, volunteer, partner, or simply learn more — we'd love to hear from you. Every connection brings us closer to our mission.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3>How to Reach Us</h3>
+
+          <div class="contact-item">
+            <div class="icon">🌐</div>
+            <div>
+              <strong>Website</strong>
+              <span><a href="https://www.kwiki-services.org" target="_blank" style="color: var(--teal);">kwiki-services.org</a></span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon">✉️</div>
+            <div>
+              <strong>Email</strong>
+              <span><a href="mailto:info@kwiki-services.org" style="color: var(--teal);">info@kwiki-services.org</a></span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon">📍</div>
+            <div>
+              <strong>Location</strong>
+              <span>Uganda, East Africa</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 2.5rem;">
+            <h3 style="margin-bottom: 1.25rem;">Ways to Get Involved</h3>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="background: var(--off-white); border-radius: 8px; padding: 1rem 1.25rem; border-left: 3px solid var(--teal);">
+                <strong style="color: var(--navy); font-size: 0.95rem;">💛 Donate</strong>
+                <p style="font-size: 0.88rem; color: var(--gray); margin-top: 0.25rem;">Fund programs that directly change families' lives.</p>
+              </div>
+              <div style="background: var(--off-white); border-radius: 8px; padding: 1rem 1.25rem; border-left: 3px solid var(--teal);">
+                <strong style="color: var(--navy); font-size: 0.95rem;">🤝 Partner</strong>
+                <p style="font-size: 0.88rem; color: var(--gray); margin-top: 0.25rem;">Institutional and corporate partnerships are welcome.</p>
+              </div>
+              <div style="background: var(--off-white); border-radius: 8px; padding: 1rem 1.25rem; border-left: 3px solid var(--teal);">
+                <strong style="color: var(--navy); font-size: 0.95rem;">🙋 Volunteer</strong>
+                <p style="font-size: 0.88rem; color: var(--gray); margin-top: 0.25rem;">Contribute your time and skills to our programs.</p>
+              </div>
+              <div style="background: var(--off-white); border-radius: 8px; padding: 1rem 1.25rem; border-left: 3px solid var(--teal);">
+                <strong style="color: var(--navy); font-size: 0.95rem;">🎓 Sponsor</strong>
+                <p style="font-size: 0.88rem; color: var(--gray); margin-top: 0.25rem;">Sponsor a family or a young person's vocational training.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--navy); margin-bottom: 1.5rem;">Send Us a Message</h3>
+          <form action="#" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" placeholder="Your first name" required />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" placeholder="Your last name" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">I'm interested in</label>
+              <select id="subject" name="subject">
+                <option value="">Select an option...</option>
+                <option value="donate">Donating</option>
+                <option value="volunteer">Volunteering</option>
+                <option value="partner">Partnership / Sponsorship</option>
+                <option value="programs">Learning About Programs</option>
+                <option value="media">Media / Press Inquiry</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" placeholder="Tell us how you'd like to get involved or any questions you have..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-teal" style="width: 100%; font-size: 1rem; padding: 0.85rem;">Send Message →</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATE CTA -->
+  <section class="donate-cta">
+    <div class="container">
+      <p class="section-label" style="color: rgba(255,255,255,0.6);">Ready to Act?</p>
+      <h2 class="section-title">Be Hope for Someone's Tomorrow</h2>
+      <p class="section-subtitle">Don't wait. A family somewhere in Uganda needs the support only you can give today.</p>
+      <div class="donate-options">
+        <a href="donations.html" class="btn btn-primary">💛 &nbsp;Donate Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="org-name">Kwiki Education Services</p>
+          <p class="slogan">Be Hope for Someone's Tomorrow</p>
+          <p>A Ugandan organisation building stronger families and thriving communities through education, mentorship, and empowerment.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="kampala.html">Kampala Project</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <a href="donations.html">Donate</a>
+          <a href="contact.html">Volunteer</a>
+          <a href="contact.html">Partner With Us</a>
+          <a href="contact.html">Sponsor a Family</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:info@kwiki-services.org">info@kwiki-services.org</a>
+          <a href="https://www.kwiki-services.org" target="_blank">kwiki-services.org</a>
+          <a href="#">Uganda</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Kwiki Education Services Limited. All rights reserved.</span>
+        <span>Designed with 💚 for Uganda's families</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
