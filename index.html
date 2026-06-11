@@ -79,15 +79,21 @@
 
   <!-- IMPACT NUMBERS -->
   <section class="impact">
-    <div class="container text-center">
-      <p class="section-label" style="color: rgba(255,255,255,0.6);">Our Impact</p>
-      <h2 class="section-title" style="color: var(--white);">Real Lives. Real Change.</h2>
-      <p class="section-subtitle" style="color: rgba(255,255,255,0.75); margin: 0 auto;">Every number represents a family that found hope, a child that found support, and a community made stronger.</p>
-      <div class="impact-grid">
-        <div class="impact-item"><strong>50+</strong><p>Families Reached</p></div>
-        <div class="impact-item"><strong>200+</strong><p>Children Supported</p></div>
-        <div class="impact-item"><strong>5</strong><p>Years of Service</p></div>
-        <div class="impact-item"><strong>10+</strong><p>Dedicated Volunteers</p></div>
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:3rem;">
+        <img src="baby.jpeg" alt="Nurturing family care" style="width:100%; height:260px; object-fit:cover; border-radius:12px;" />
+        <img src="chess.jpeg" alt="Family bonding activities" style="width:100%; height:260px; object-fit:cover; border-radius:12px;" />
+      </div>
+      <div class="text-center">
+        <p class="section-label" style="color: rgba(255,255,255,0.6);">Our Impact</p>
+        <h2 class="section-title" style="color: var(--white);">Real Lives. Real Change.</h2>
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.75); margin: 0 auto;">Every number represents a family that found hope, a child that found support, and a community made stronger.</p>
+        <div class="impact-grid">
+          <div class="impact-item"><strong>50+</strong><p>Families Reached</p></div>
+          <div class="impact-item"><strong>200+</strong><p>Children Supported</p></div>
+          <div class="impact-item"><strong>5</strong><p>Years of Service</p></div>
+          <div class="impact-item"><strong>10+</strong><p>Dedicated Volunteers</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -112,18 +118,48 @@
           <p>Workshops helping low-income families build sustainable livelihoods through financial literacy and business management skills.</p>
         </div>
         <div class="program-card">
-          <img src="baby.jpeg" alt="Early Childhood and Family Care" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:1rem;" />
           <h3>🧺 Hands-on Weaving</h3>
           <p>Participants produce bags and baskets for major events, attracting donations that raise incomes and support school-going children.</p>
         </div>
         <div class="program-card">
-          <img src="chess.jpeg" alt="Family Bonding and Recreation" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:1rem;" />
           <h3>📊 Financial Stability Training</h3>
           <p>Participants save UGX 1,000–5,000 daily, growing yearly savings to expand projects, budget better, and support their families.</p>
         </div>
         <div class="program-card">
           <h3>🌿 Emotional Wellness</h3>
           <p>Training in emotional stability, customer relationships, and community ties — recognising that success grows from strong networks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO SLIDESHOW -->
+  <section style="background: var(--navy); padding: 4rem 0;">
+    <div class="container text-center">
+      <p class="section-label" style="color: rgba(255,255,255,0.6);">Life at Kwiki</p>
+      <h2 class="section-title" style="color: var(--white);">Community in Action</h2>
+      <p class="section-subtitle" style="color: rgba(255,255,255,0.75); margin: 0 auto 2rem;">A glimpse into the lives we touch and the communities we serve.</p>
+      <div class="slideshow">
+        <div class="slides">
+          <div class="slide active">
+            <img src="baby.jpeg" alt="Nurturing care and early childhood support" />
+            <p class="slide-caption">Nurturing the next generation — family care and early childhood support</p>
+          </div>
+          <div class="slide">
+            <img src="chess.jpeg" alt="Family bonding and recreation activities" />
+            <p class="slide-caption">Family bonding and community wellness activities</p>
+          </div>
+          <div class="slide">
+            <img src="teamjoinhands.jpeg" alt="Kwiki team united" />
+            <p class="slide-caption">Our team — united by purpose, driven by hope</p>
+          </div>
+        </div>
+        <button class="slide-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="slide-btn next" onclick="moveSlide(1)">&#10095;</button>
+        <div class="slide-dots">
+          <span class="dot active" onclick="goToSlide(0)"></span>
+          <span class="dot" onclick="goToSlide(1)"></span>
+          <span class="dot" onclick="goToSlide(2)"></span>
         </div>
       </div>
     </div>
@@ -243,5 +279,23 @@
     </div>
   </footer>
 
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(n) {
+      slides.forEach(s => s.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    function moveSlide(dir) { showSlide(current + dir); }
+    function goToSlide(n) { showSlide(n); }
+
+    setInterval(() => moveSlide(1), 4000);
+  </script>
 </body>
 </html>
