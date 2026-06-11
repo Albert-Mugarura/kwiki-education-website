@@ -135,27 +135,44 @@
     <div class="container">
       <p class="section-label">Participant Voices</p>
       <h2 class="section-title text-center">Stories from Kampala</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <p>"Great coaching on emotional stability at home and dealing with customers."</p>
-          <div class="testimonial-author">
-            <strong>Bainomugisha Amos</strong>
-            <span>Kampala Project Participant</span>
+      <div class="testimonial-slideshow">
+        <div class="testimonial-slides">
+          <div class="testimonial-slide active">
+            <div class="testimonial-card">
+              <img src="hillaryamos.jpeg" alt="Bainomugisha Amos" class="testimonial-photo" />
+              <p>"Great coaching on emotional stability at home and dealing with customers."</p>
+              <div class="testimonial-author"><strong>Bainomugisha Amos</strong><span>Kampala Project Participant</span></div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <img src="phoebe.jpeg" alt="Pheobe Rwamwenge" class="testimonial-photo" />
+              <p>"I was trained to uphold excellent tips for emotional balance for home and at work."</p>
+              <div class="testimonial-author"><strong>Pheobe Rwamwenge</strong><span>Kampala Project Participant</span></div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <img src="milly.jpeg" alt="Milly Kinsumbya" class="testimonial-photo" />
+              <p>"I learned about smart saving strategies, goal setting and sticking to them to succeed."</p>
+              <div class="testimonial-author"><strong>Milly Kinsumbya</strong><span>Kampala Project Participant</span></div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <img src="albert.jpeg" alt="Eng. Albert" class="testimonial-photo" />
+              <p>"The technical and professional skills training at Kwiki opened my eyes to what our communities are truly capable of. When families are equipped with the right tools and knowledge, they don't just survive — they build, they lead, and they inspire the next generation."</p>
+              <div class="testimonial-author"><strong>Eng. Albert</strong><span>Kampala Project Participant</span></div>
+            </div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <p>"I was trained to uphold excellent tips for emotional balance for home and at work."</p>
-          <div class="testimonial-author">
-            <strong>Pheobe Rwamwenge</strong>
-            <span>Kampala Project Participant</span>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <p>"I learned about smart saving strategies, goal setting and sticking to them to succeed."</p>
-          <div class="testimonial-author">
-            <strong>Milly Kinsumbya</strong>
-            <span>Kampala Project Participant</span>
-          </div>
+        <button class="t-btn t-prev" onclick="moveTestimonial(-1)">&#10094;</button>
+        <button class="t-btn t-next" onclick="moveTestimonial(1)">&#10095;</button>
+        <div class="t-dots">
+          <span class="t-dot active" onclick="goToTestimonial(0)"></span>
+          <span class="t-dot" onclick="goToTestimonial(1)"></span>
+          <span class="t-dot" onclick="goToTestimonial(2)"></span>
+          <span class="t-dot" onclick="goToTestimonial(3)"></span>
         </div>
       </div>
     </div>
@@ -212,5 +229,20 @@
     </div>
   </footer>
 
+  <script>
+    let tCurrent = 0;
+    const tSlides = document.querySelectorAll('.testimonial-slide');
+    const tDots = document.querySelectorAll('.t-dot');
+    function showTestimonial(n) {
+      tSlides.forEach(s => s.classList.remove('active'));
+      tDots.forEach(d => d.classList.remove('active'));
+      tCurrent = (n + tSlides.length) % tSlides.length;
+      tSlides[tCurrent].classList.add('active');
+      tDots[tCurrent].classList.add('active');
+    }
+    function moveTestimonial(dir) { showTestimonial(tCurrent + dir); }
+    function goToTestimonial(n) { showTestimonial(n); }
+    setInterval(() => moveTestimonial(1), 5000);
+  </script>
 </body>
 </html>
