@@ -98,11 +98,11 @@
         </div>
 
         <!-- Contact Form -->
-        <div class="contact-form">
+        <div id="contact-form" class="contact-form">
           <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--navy); margin-bottom: 1.5rem;">Send Us a Message</h3>
           <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="9d9c39d4-76c1-49cc-866a-e80a74c4500d" />
-            <input type="hidden" name="redirect" value="https://albert-mugarura.github.io/kwiki-education-website/contact.html" />
+            <input type="hidden" name="redirect" value="https://albert-mugarura.github.io/kwiki-education-website/contact.html?sent=true#contact-form" />
             <div class="form-row">
               <div class="form-group">
                 <label for="first-name">First Name</label>
@@ -191,5 +191,14 @@
     </div>
   </footer>
 
+  <script>
+    if (location.search.includes('sent=true')) {
+      const msg = document.createElement('div');
+      msg.style.cssText = 'background:var(--teal);color:white;padding:1rem 2rem;border-radius:8px;margin-bottom:1.5rem;font-weight:600;';
+      msg.textContent = 'Thank you! Your message has been sent. We will get back to you soon.';
+      document.getElementById('contact-form').prepend(msg);
+      setTimeout(() => msg.remove(), 6000);
+    }
+  </script>
 </body>
 </html>
