@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://albert-mugarura.github.io/kwiki-education-website/sitemap.xml
+Sitemap: https://albert-mugarura.github.io/kwiki-education-website/sitemap.txt
