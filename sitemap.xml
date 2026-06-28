@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.kwiki-services.org/</loc>
+    <loc>https://albert-mugarura.github.io/kwiki-education-website/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.kwiki-services.org/about.html</loc>
+    <loc>https://albert-mugarura.github.io/kwiki-education-website/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kwiki-services.org/kampala.html</loc>
+    <loc>https://albert-mugarura.github.io/kwiki-education-website/kampala.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kwiki-services.org/contact.html</loc>
+    <loc>https://albert-mugarura.github.io/kwiki-education-website/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.kwiki-services.org/donations.html</loc>
+    <loc>https://albert-mugarura.github.io/kwiki-education-website/donations.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.kwiki-services.org/articles.html</loc>
+    <loc>https://albert-mugarura.github.io/kwiki-education-website/articles.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
